@@ -34,4 +34,14 @@ public class MathTest {
 		 */
 		assertEquals(expected, Math.combinacaoSimples(5, 3));
 	}
+
+	@Test
+	public void deveCalcularArranjoComRepeticao() throws Exception {
+		long expected = 125L;
+		/**
+		 * Considerando um conjunto das vogais, quantas senhas com 3 letras,
+		 * podemos repetir?
+		 */
+		assertEquals(expected, Math.arranjoComRepeticao(5, 3));
+	}
 }

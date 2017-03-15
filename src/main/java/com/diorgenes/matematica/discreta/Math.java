@@ -49,4 +49,38 @@ public class Math {
 	public static long combinacaoSimples(int n, int p) {
 		return nFatorial(n) / (nFatorial(p) * nFatorial(n - p));
 	}
+
+	/**
+	 * Permutação com elemento repetidos
+	 * 
+	 * @param n
+	 *            permuta
+	 * @param k
+	 *            valores repetidos
+	 * @return o produto de Pn
+	 */
+	public static long permutacaoRepetidos(int n, int... k) {
+		long denominador = 1L;
+		for (int i : k) {
+			denominador *= nFatorial(i);
+		}
+		return nFatorial(n) / denominador;
+	}
+
+	/**
+	 * Arranjo com repetição.
+	 * 
+	 * @param n
+	 *            conjunto.
+	 * @param r
+	 *            repetição.
+	 * @return o produto de n^r
+	 */
+	public static long arranjoComRepeticao(final int n, int r) {
+		long resultado = 1L;
+		while (r-- > 0) {
+			resultado *= n;
+		}
+		return resultado;
+	}
 }
