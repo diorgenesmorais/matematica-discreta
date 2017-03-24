@@ -64,18 +64,24 @@ public class Math {
 	}
 
 	/**
-	 * Arranjo com repetição.
+	 * Potenciação. (só para estudo - já existe um método na classe
+	 * java.lang.Math.pow(a,b))
 	 * 
+	 * <pre>
+	 * Caso de uso:
+	 * Arranjo com repetição.
+	 * </pre>
+	 * 
+	 * @param b
+	 *            base.
 	 * @param n
-	 *            conjunto.
-	 * @param r
-	 *            repetição.
-	 * @return o produto de n^r
+	 *            expoente.
+	 * @return a potência de {@code n}<sup>{@code r}</sup>
 	 */
-	public static long arranjoComRepeticao(final int n, int r) {
+	public static long potenciacao(final int b, int n) {
 		long resultado = 1L;
-		while (r-- > 0) {
-			resultado *= n;
+		while (n-- > 0) {
+			resultado *= b;
 		}
 		return resultado;
 	}

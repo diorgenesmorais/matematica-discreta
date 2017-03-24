@@ -42,7 +42,7 @@ public class MathTest {
 		 * Considerando um conjunto das vogais, quantas senhas com 3 letras,
 		 * podemos repetir?
 		 */
-		assertEquals(expected, Math.arranjoComRepeticao(5, 3));
+		assertEquals(expected, Math.potenciacao(5, 3));
 	}
 
 	@Test
