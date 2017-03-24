@@ -85,4 +85,23 @@ public class Math {
 		}
 		return resultado;
 	}
+
+	/**
+	 * É número primo.
+	 * 
+	 * @param n
+	 *            número.
+	 * @return {@code true} se for primo.
+	 */
+	public static boolean isPrimo(int n) {
+		int x = n, i = 0;
+		while(x > 0){
+			if(!(n % x > 0)){
+				i++;
+			}
+			x--;
+		}
+		return (i <= 2);
+	}
+
 }
