@@ -17,11 +17,7 @@ public class Math {
 	 * @return o fatorial de n (N!).
 	 */
 	public static long nFatorial(int n) {
-		if (n == 1) {
-			return n;
-		} else {
-			return n * nFatorial(n - 1);
-		}
+		return (n == 1) ? n : n * nFatorial(n - 1);
 	}
 
 	/**
