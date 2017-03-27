@@ -74,14 +74,19 @@ public class Math {
 	 * 
 	 * @param b
 	 *            base.
-	 * @param n
+	 * @param e
 	 *            expoente.
-	 * @return a potência de {@code n}<sup>{@code r}</sup>
+	 * @return a potência de {@code b}<sup>{@code e}</sup>
 	 */
-	public static long potenciacao(final int b, int n) {
-		long resultado = 1L;
-		while (n-- > 0) {
+	public static double potenciacao(final int b, int e) {
+		long resultado = b;
+		int x = (e < 0) ? e * -1 : e;
+
+		while (x-- > 1) {
 			resultado *= b;
+		}
+		if (e < 0) {
+			return (1.0 / resultado);
 		}
 		return resultado;
 	}
@@ -95,8 +100,8 @@ public class Math {
 	 */
 	public static boolean isPrimo(final int n) {
 		int x = n, i = 0;
-		while(x > 0){
-			if(!(n % x > 0)){
+		while (x > 0) {
+			if (!(n % x > 0)) {
 				i++;
 			}
 			x--;

@@ -42,7 +42,7 @@ public class MathTest {
 		 * Considerando um conjunto das vogais, quantas senhas com 3 letras,
 		 * podemos repetir?
 		 */
-		assertEquals(expected, Math.potenciacao(5, 3));
+		assertEquals(expected, (long) Math.potenciacao(5, 3));
 	}
 
 	@Test
@@ -62,6 +62,15 @@ public class MathTest {
 		for (int i : x) {
 			assertEquals(expected, Math.isPrimo(i));
 		}
+	}
+
+	@Test
+	public void deveCalcularValorUsandoNotacaoCientifica() throws Exception {
+		double expected = 0.00016;
+		/*
+		 * Calcular o valor da notação científica de 1.6E-4 (1.6*10^-4)
+		 */
+		assertEquals(expected, (1.6 * Math.potenciacao(10, -4)), 0.0001);
 	}
 
 }
