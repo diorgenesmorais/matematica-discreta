@@ -58,7 +58,7 @@ public class MathTest {
 	@Test
 	public void confirmarSeEhConjuntoDeNumerosPrimos() throws Exception {
 		boolean expected = true;
-		int x[] = { 1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
+		int x[] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
 		for (int i : x) {
 			assertEquals(expected, Math.isPrimo(i));
 		}

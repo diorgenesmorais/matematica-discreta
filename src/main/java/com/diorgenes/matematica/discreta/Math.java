@@ -93,7 +93,7 @@ public class Math {
 	 *            número.
 	 * @return {@code true} se for primo.
 	 */
-	public static boolean isPrimo(int n) {
+	public static boolean isPrimo(final int n) {
 		int x = n, i = 0;
 		while(x > 0){
 			if(!(n % x > 0)){
@@ -101,7 +101,7 @@ public class Math {
 			}
 			x--;
 		}
-		return (i <= 2);
+		return (i == 2);
 	}
 
 }
