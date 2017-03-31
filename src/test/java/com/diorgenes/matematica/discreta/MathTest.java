@@ -81,7 +81,14 @@ public class MathTest {
 	public void deveGerarUmaSequenciaFibonacci() throws Exception {
 		int[] expected = { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 };
 		for (int i = 1; i < 13; i++) {
-			assertEquals(expected[i-1], fibonacci(i));
+			assertEquals(expected[i - 1], fibonacci(i));
 		}
 	}
+
+	@Test
+	public void deveCalcularPotenciaComExpoenteZero() throws Exception {
+		double expected = 1; // potencia de 2^0
+		assertEquals(expected, Math.potenciacao(2, 0), 0.00001);
+	}
+
 }
