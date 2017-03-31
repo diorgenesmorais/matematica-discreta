@@ -73,4 +73,15 @@ public class MathTest {
 		assertEquals(expected, (1.6 * Math.potenciacao(10, -4)), 0.0001);
 	}
 
+	private long fibonacci(int n) {
+		return (n < 2) ? n : fibonacci(n - 2) + fibonacci(n - 1);
+	}
+
+	@Test
+	public void deveGerarUmaSequenciaFibonacci() throws Exception {
+		int[] expected = { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 };
+		for (int i = 1; i < 13; i++) {
+			assertEquals(expected[i-1], fibonacci(i));
+		}
+	}
 }
