@@ -79,10 +79,10 @@ public class Math {
 	 * @return a potência de {@code b}<sup>{@code e}</sup>
 	 */
 	public static double potenciacao(final int b, int e) {
-		long resultado = b;
+		long resultado = 1L;
 		int x = (e < 0) ? e * -1 : e;
 
-		while (x-- > 1) {
+		while (x-- > 0) {
 			resultado *= b;
 		}
 		if (e < 0) {
