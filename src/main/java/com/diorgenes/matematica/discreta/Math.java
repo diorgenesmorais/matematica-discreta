@@ -101,7 +101,7 @@ public class Math {
 	public static boolean isPrimo(final int n) {
 		int x = n, i = 0;
 		while (x > 0) {
-			if (!(n % x > 0)) {
+			if (n % x == 0) {
 				i++;
 			}
 			x--;
